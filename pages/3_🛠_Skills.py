@@ -5,19 +5,13 @@ st.set_page_config(page_title="Portfólio & Skills", layout="wide")
 
 st.logo("skills-icon.jpg")
 
-col1, col2, col3 = st.columns(3)
+st.header("🔹 Competências técnicas (Hard Skills)")
+st.subheader("👨‍🔬 Ciência de Dados & IA")
+st.write("- Machine Learning: TensorFlow, PyTorch, Scikit-Learn.")
+st.write("- Análise de Dados: Pandas, Matplotlib, Power BI.")
+st.write("- Processamento de Linguagem Natural (NLP): LangChain, OpenAI API.")
 
-with col1:
-    st.header("📌 Coluna 1")
-    st.write("Conteúdo da primeira coluna.")
-
-with col2:
-    st.header("📌 Coluna 2")
-    st.write("Conteúdo da segunda coluna.")
-
-with col3:
-    st.header("📌 Coluna 2")
-    st.write("Conteúdo da segunda coluna.")
-
-st.subheader("🔹 Subtópico 2")
-st.write("Descrição ou explicação do subtópico 2.")
+st.subheader("👨‍💻 Banco de Dados & Big Data")
+st.write("- SQL (MySQL).")
+st.write("- NoSQL (MongoDB).")
+st.write("- Processamento de Dados: Apache Spark.")

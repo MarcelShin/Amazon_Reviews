@@ -44,6 +44,7 @@ st.markdown(" - O desvio padrão da média é de 1.7 estrelas")
 st.markdown(" - O primeiro quartil (25%), possui as piores avaliações (1), em contra partida, quando observamos o último quartil, identificamos que lá estão as melhores avaliações do app.")
 st.markdown(" - De todos os quartis, apenas o último quartil possui 'curtidas' nas avaliações, as demais, estão sem curtidas.")
 
+st.write(" \n ")
 
 selected_chart = st.selectbox(
     "Selecione o gráfico que deseja visualizar:",
@@ -96,7 +97,7 @@ elif selected_chart == "Distribuição Probabilística 📊":
                  labels={"score": "Nota", "thumbsUpCount": "Probabilidade"},
                  text_auto=True,
                  color="score",
-                 color_continuous_scale="reds")
+                 color_discrete_map="blues")
 
     st.plotly_chart(fig, use_container_width=True)
 
