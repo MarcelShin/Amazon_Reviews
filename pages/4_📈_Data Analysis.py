@@ -87,7 +87,7 @@ elif selected_chart == "Distribuição Probabilística 📊":
                  labels={"score": "Nota", "thumbsUpCount": "Probabilidade"},
                  text_auto=True,
                  color="score",
-                 color_continuous_scale="blues")
+                 color_continuous_scale="reds")
 
     st.plotly_chart(fig, use_container_width=True)
 

@@ -9,7 +9,7 @@ st.set_page_config(page_title="Portfólio & Business Analytics", layout="wide")
 # Adicionando o logo no body - "Sobre mim"
 st.image("profile_foto_marcelo.jfif", width=150)
 
-st.title("SOBRE MIM")
+st.title("Bem-vindo ao meu Portfólio!")
 
 st.write("Olá, me chamo Marcelo! Atualmente, atuo na área de Governança de Tecnologia, e utilizo de muitos dados para minhas rotinas de análise.")
 
