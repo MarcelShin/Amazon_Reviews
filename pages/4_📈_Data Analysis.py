@@ -15,7 +15,7 @@ st.set_page_config(page_title="Portfólio & Business Analytics", layout="wide")
 st.logo("amazon_logo.webp")
 
 st.title("Visualização dos dados")
-st.write(" ##### Conjunto de um dataset da Google, utilizado com o intuito de entender melhor sobre a avaliação do uso da Amazon na Google Play.")
+st.write(" ##### Conjunto de um dataset da Google Play, utilizado com o intuito de entender melhor sobre a avaliação da Amazon na Google Play.")
 st.write(" \n ")
 
 @st.cache_data
@@ -28,12 +28,21 @@ df = load_data()
 st.write(df.head(5))
 
 st.title("Identificação das variaveis")
-df["at"] = pd.to_datetime(df["at"])
-tipos_variaveis = df.dtypes
-st.table(tipos_variaveis)
+st.write(" 1. reviewId - Qualitativa | Utilizada para ordenar os IDs.")
+st.write(" 2. userName - Quantitativa | Não depende de ordem, servindo apenas para identificação dos Users.")
+st.write(" 3. content - Quantitativa | Não possui ordem, considernado que é apenas o comentário, e não possui critério para ordenar.")
+st.write(" 4. score - Qualitativa | Deve ser ordenada para identificarmos as maiores estrelas, seguindo até as menores estrelas das avaliações.")
+st.write(" 5. thumbsUpCount - Qualitativa | Ordenar para ver as avaliações com maiores curtidas.")
+st.write(" 6. reviewCreatedVersion - Qualitativa | Utilizando a ordem das versões da review, para avaliações de versões mais recentes.")
+st.write(" 7. at - Qualitativa | Ordenada, para identificar as avaliações mais recentes.")
+st.write(" 8. appVersion - Qualitativa | Utilizando a ordem das versões do app, para avaliações de versões mais recentes.")
 
 st.title("Medidas Centrais & Dispersão")
 st.write(df.describe())
+st.markdown(" - Temos um total de 71.172 avaliações, e no todo, a média de estrelas por avaliação é de 2.5")
+st.markdown(" - O desvio padrão da média é de 1.7 estrelas")
+st.markdown(" - O primeiro quartil (25%), possui as piores avaliações (1), em contra partida, quando observamos o último quartil, identificamos que lá estão as melhores avaliações do app.")
+st.markdown(" - De todos os quartis, apenas o último quartil possui 'curtidas' nas avaliações, as demais, estão sem curtidas.")
 
 
 selected_chart = st.selectbox(
