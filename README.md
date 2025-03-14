@@ -43,9 +43,13 @@ O dashboard permite selecionar diferentes tipos de análises:
 
 ## Estrutura do Projeto
 |-- amazon_logo.webp
+
 |-- amazon_reviews.csv
+
 |-- app.py
+
 |-- requirements.txt
+
 |-- README.md
 
 ## Contribuição
